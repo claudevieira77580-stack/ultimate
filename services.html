@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GoldConstruction — Services</title>
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body class="has-bg">
+<div id="preloader">
+  <div class="preloader-inner">
+    <div class="gc-mark">GC</div>
+  </div>
+</div>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="./index.html" aria-label="Accueil">
+      <img src="assets/logo-gc.png" alt="Logo GoldConstruction" class="brand-logo">
+    </a>
+    <nav class="nav">
+      <a href="./index.html">Accueil</a>
+      <a href="./a-propos.html">À propos</a>
+      <a href="./services.html">Services</a>
+      <a href="./realisations.html">Réalisations</a>
+      <a href="./contact.html">Contact</a>
+    </nav>
+  </div>
+  <p class="tagline">L’art dans vos travaux, l’or dans vos projets</p>
+</header>
+<main class="container page">
+  <h1>Nos services</h1>
+  <section class="panel fade-section">
+    <h2>Rénovation intérieure</h2>
+    <p>Peinture, plâtrerie, sols (carrelage, parquet), électricité, plomberie, menuiserie, cuisines et salles de bains.</p>
+
+    <h2>Rénovation extérieure</h2>
+    <p>Maçonnerie, façades, isolation thermique, toiture, ravalement et enduits décoratifs.</p>
+    <p><strong>Piscines, dallages et aménagements extérieurs haut de gamme.</strong></p>
+
+    <h2>Aménagement sur mesure</h2>
+    <p>Dressings, bibliothèques, cloisons vitrées, terrasses, pergolas, escaliers et espaces extérieurs.</p>
+
+    <h2>Rénovation d’immeubles & copropriétés</h2>
+    <p>Réhabilitation, parties communes, remises aux normes et coordination multi‑corps de métier.</p>
+
+    <h2>Travaux clés en main</h2>
+    <p>Étude, conception, réalisation et suivi de chantier avec un interlocuteur unique.</p>
+  </section>
+
+</main>
+<footer class="site-footer fade-section">
+  <div class="container footer-grid">
+    <div>
+      <img src="assets/logo-gc.png" alt="GoldConstruction logo" class="footer-logo">
+    </div>
+    <div>
+      <h4>Siège social</h4>
+      <p>38 avenue Faidherbe<br>83500 La Seyne-sur-Mer</p>
+    </div>
+    <div>
+      <h4>Bureaux</h4>
+      <p>231 lotissement du Parc Sainte-Claire<br>83160 La Valette-du-Var</p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p>06.66.59.81.39<br>06.41.50.11.50<br>
+      <a href="mailto:goldconstruction02@gmail.com">goldconstruction02@gmail.com</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">© GoldConstruction — Tous droits réservés</div>
+</footer>
+
+<!-- Script adaptatif pour liens relatifs ./ -->
+<script>
+(function() { 
+  const segments = window.location.pathname.split('/').filter(Boolean);
+  const base = segments.length > 0 ? '/' + segments[0] + '/' : '/';
+  document.querySelectorAll('a[href^="./"]').forEach(a => {
+    const target = a.getAttribute('href').replace('./','');
+    a.href = base + target;
+  });
+})();
+</script>
+</body>
+</html>

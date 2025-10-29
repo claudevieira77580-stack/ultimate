@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GoldConstruction — Réalisations</title>
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body class="has-bg">
+<div id="preloader">
+  <div class="preloader-inner">
+    <div class="gc-mark">GC</div>
+  </div>
+</div>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="./index.html" aria-label="Accueil">
+      <img src="assets/logo-gc.png" alt="Logo GoldConstruction" class="brand-logo">
+    </a>
+    <nav class="nav">
+      <a href="./index.html">Accueil</a>
+      <a href="./a-propos.html">À propos</a>
+      <a href="./services.html">Services</a>
+      <a href="./realisations.html">Réalisations</a>
+      <a href="./contact.html">Contact</a>
+    </nav>
+  </div>
+  <p class="tagline">L’art dans vos travaux, l’or dans vos projets</p>
+</header>
+<main class="container page">
+  <h1>Réalisations</h1>
+  <section class="panel fade-section">
+    <p>Quelques exemples de projets. Remplacez les images par vos chantiers.</p>
+    <div class="gallery">
+      <img src="assets/villa-sunset.jpg" alt="Villa rénovée au coucher de soleil">
+      <img src="assets/villa-sunset.jpg" alt="Projet 2 (exemple)">
+      <img src="assets/villa-sunset.jpg" alt="Projet 3 (exemple)">
+    </div>
+  </section>
+
+</main>
+<footer class="site-footer fade-section">
+  <div class="container footer-grid">
+    <div>
+      <img src="assets/logo-gc.png" alt="GoldConstruction logo" class="footer-logo">
+    </div>
+    <div>
+      <h4>Siège social</h4>
+      <p>38 avenue Faidherbe<br>83500 La Seyne-sur-Mer</p>
+    </div>
+    <div>
+      <h4>Bureaux</h4>
+      <p>231 lotissement du Parc Sainte-Claire<br>83160 La Valette-du-Var</p>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p>06.66.59.81.39<br>06.41.50.11.50<br>
+      <a href="mailto:goldconstruction02@gmail.com">goldconstruction02@gmail.com</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">© GoldConstruction — Tous droits réservés</div>
+</footer>
+
+<!-- Script adaptatif pour liens relatifs ./ -->
+<script>
+(function() { 
+  const segments = window.location.pathname.split('/').filter(Boolean);
+  const base = segments.length > 0 ? '/' + segments[0] + '/' : '/';
+  document.querySelectorAll('a[href^="./"]').forEach(a => {
+    const target = a.getAttribute('href').replace('./','');
+    a.href = base + target;
+  });
+})();
+</script>
+</body>
+</html>
